@@ -1,28 +1,32 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace jurnal5 {
-class Penjumlahan<T>
+class Program
 {
-    public dynamic JumlahTigaAngka<T>(T angka1, T angka2, T angka3)
+    class SimpleDataBase<T>
     {
-        dynamic A = angka1;
-        dynamic B = angka2;
-        dynamic C = angka3;
+        List<T> storeData { get; set; }
+        List<DateTime> inputDates { get; set; }
 
-        return A + B + C;
+        public SimpleDataBase()
+        {
+            storeData = new List<T>();  
+            inputDates = new List<DateTime>();
+        }
+        public void AddNewData(T List)
+        {
+            storeData.Add(List);
+            inputDates.Add(DateTime.Now);
+        }
+        public void printAllData()
+        {
+            for (int i =0; i < storeData.Count; i++)
+            {
+                Console.WriteLine("Data" + i + "berisi: " + storedData[i] + "yang disimpan pada waktu" + inputDates[i]);
+            }
+        }
     }
-}
-
-internal class Program
-{
-    public static void Main(string[] args)
-    {
-        Penjumlahan<double> JumlahTigaAngka = new Penjumlahan<double>();
-        Console.WriteLine(JumlahTigaAngka.JumlahTigaAngka(13, 02, 22));
-    }
-}
 }
