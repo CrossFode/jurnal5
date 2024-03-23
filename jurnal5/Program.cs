@@ -21,7 +21,7 @@ internal class Program
 {
     public static void Main(string[] args)
     {
-        Penjumlahan<int> JumlahTigaAngka = new Penjumlahan<int>();
+        Penjumlahan<double> JumlahTigaAngka = new Penjumlahan<double>();
         Console.WriteLine(JumlahTigaAngka.JumlahTigaAngka(13, 02, 22));
     }
 }
